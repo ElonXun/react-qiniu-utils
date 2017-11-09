@@ -1,8 +1,11 @@
 /*
-  简单上传(表单post方式)
-  详情:https://developer.qiniu.com/kodo/manual/1272/form-upload
+  简单上传(表单post方式) 详情:https://developer.qiniu.com/kodo/manual/1272/form-upload
+  参数: token => 七牛上传凭证
+      file  =>  要上传的文件
+      newFileName =>  新的文件名
+  teturn => promise
 */
-export const uploadPicture = (file,token,newFileName,successCallBack)=>{
+export const uploadPicture = (file,token,newFileName)=>{
   const formData = new FormData()
   formData.append('token', token)
   formData.append('key', newFileName)
